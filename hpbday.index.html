@@ -27,7 +27,7 @@
 		#cover_1{
 			top: 600px;
 			width: 600px;
-			border-radius: 20px;
+			border-radius: 25px;
 			margin-left: 120px;
 			margin-top: 280px;
 			display: none;
@@ -36,11 +36,35 @@
 		#cover_2{
 			top: 600px;
 			width: 600px;
-			border-radius: 20px;
+			border-radius: 25px;
+			margin-left: 120px;
+			margin-top: 380px;
+			display: none;
+			position: absolute;
+			z-index: 1;
+		}
+		#cover_3{
+			top: 600px;
+			width: 350px;
+			height: 700px;
+			border-radius: 25px;
 			margin-left: 120px;
 			margin-top: 480px;
 			display: none;
 			position: absolute;
+			z-index: 2;
+			
+		}
+		#cover_4{
+			top: 600px;
+			width: 350px;
+			height: 700px;
+			border-radius: 25px;
+			margin-left: 120px;
+			margin-top: 580px;
+			display: none;
+			position: absolute;
+			z-index:3;
 		}
 		#p1{
 			top: 500px;
@@ -75,7 +99,7 @@
 			border-bottom-left-radius: 25%;
 			border-bottom-right-radius: 25%;
 		}
-		
+		 
 		 .switch {
 			margin-left: 10px;
 			position: relative;
@@ -148,8 +172,17 @@
 				<input type="checkbox" onclick="myFunctioner()">
 				<span class="slider round"></span>		
 		</label> <br/> <br/>
-		<a href = "http://facebook.com/chnhuyy.35" > <img src="./img/fb.png" class ="type"/></a> <br/>
-		<a href = "http://instagram.com/chnhuyy.35" > <img src="./img/ig.png" class ="type"/> </a> <br/>
+		<a href = "http://facebook.com/chnhuyy.35" > <img src = "./img/fby.jpg"/ id = "cover_3"> </a> 
+		
+		<label class = "switch">
+			<input type="checkbox"  onclick ="myFunctioner1()"/>
+			<img src="./img/fb.png" class ="type"/> 
+		</label> <br/>
+		<a href = "http://instagram.com/chnhuyy.35" > <img src = "./img/igy.jpg"/ id = "cover_4"></a> 
+		<label class = "switch">	
+			<img src="./img/ig.png" class ="type" /> 
+			<input type="checkbox"  onclick ="myFunctioner2()"/>
+		</label>
 		<img src ="./img/img01.jpg" id ="cover_1"/>
 		<a href ="https://dangkhanhdong.github.io/hpbd/hpbd.index.html"> <img src ="./img/qr.jpg" id ="cover_2"/> </a>
 		
@@ -189,6 +222,30 @@
 					n = n+1;
 				 }
 			
+		  }
+		  
+		  var a = 0;
+		  
+		  		function myFunctioner1(){
+		  		var fb = document.getElementById('cover_3');
+		  		if(a%2==0){ 
+					fb.style.display = 'block';
+					a++;
+				}else{
+					fb.style.display = 'none';
+					a++;
+				}
+		  }
+		  var b = 0;
+		  function myFunctioner2(){
+		  		var fb = document.getElementById('cover_4');
+		  		if(b%2==0){ 
+					fb.style.display = 'block';
+					b++;
+				}else{
+					fb.style.display = 'none';
+					b++;
+				}
 		  }
 	   
     </script>
